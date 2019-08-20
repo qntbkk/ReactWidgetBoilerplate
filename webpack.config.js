@@ -17,7 +17,7 @@ module.exports = {
     // mode: "production",
     mode: "development",
     output: {
-        filename: "./com/mendix/widget/custom/MxReactWidget/MxReactWidget.js",
+        filename: "./com/mendix/widget/custom/ReactWidgetBoilerplate/ReactWidgetBoilerplate.js",
         libraryTarget: "umd",
     },
     cache: false,

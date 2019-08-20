@@ -1,5 +1,5 @@
 {
-  "name": "mxreactwidget",
+  "name": "ReactWidgetBoilerplate",
   "version": "1.0.0",
   "description": "mx react widget",
   "main": "index.js",
@@ -16,8 +16,8 @@
     "mendix",
     "widget"
   ],
-  "author": "duc bui <d.bui@schhanoi.com>",
-  "license": "ISC",
+  "author": "Tony",
+  "license": "MIT",
   "homepage": "",
   "devDependencies": {
     "@types/dojo": "^1.9.38",

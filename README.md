@@ -1,10 +1,6 @@
 # MxReactWidget
 ## Boilterplate to build Mendix Widget by React
 
-demo: 
-
-https://reactwidgetapp100.mxapps.io/index.html?profile=Responsive
-
 ## How to use
 1. Install dependencies
 npm install

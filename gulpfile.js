@@ -11,18 +11,18 @@ gulp.task('compileTs', function () {
     var tsResult = tsProject.src()
         .pipe(tsProject());
     return tsResult.js
-        .pipe(gulp.dest('./release/MxReactWidget/widget'));
+        .pipe(gulp.dest('./release/ReactWidgetBoilerplate/widget'));
 
 });
 
 gulp.task("otherFiles", function () {
     return merge2([
-        gulp.src(["MxReactWidget/widget/ui/*.*"])
-            .pipe(gulp.dest("./bundle/com/mendix/widget/custom/MxReactWidget/ui/")),
+        gulp.src(["ReactWidgetBoilerplate/widget/ui/*.*"])
+            .pipe(gulp.dest("./bundle/com/mendix/widget/custom/ReactWidgetBoilerplate/ui/")),
         gulp.src(["./*.xml"])
             .pipe(gulp.dest("bundle/")),
-        gulp.src(["MxReactWidget/*.xml"])
-            .pipe(gulp.dest("bundle/MxReactWidget/")),
+        gulp.src(["ReactWidgetBoilerplate/*.xml"])
+            .pipe(gulp.dest("bundle/ReactWidgetBoilerplate/")),
     ])
 });
 
@@ -32,16 +32,16 @@ gulp.task("clean", function () {
 });
 gulp.task("zip", function () {
     return gulp.src("./bundle/**/*")
-        .pipe(zip("MxReactWidget.mpk"))
+        .pipe(zip("ReactWidgetBoilerplate.mpk"))
         .pipe(gulp.dest("./test/widgets/"))
 })
 gulp.task('webpack', () =>
-    gulp.src("./release/MxReactWidget/widget/MxReactWidget.js")
+    gulp.src("./release/ReactWidgetBoilerplate/widget/ReactWidgetBoilerplate.js")
         .pipe(webpack(require("./webpack.config.js")))
         .pipe(gulp.dest("./bundle"))
 )
 gulp.task("taskList", sequence(["compileTs", "otherFiles"], "webpack", "zip"));
 gulp.task("watch", function () {
-    gulp.watch("./MxReactWidget/**/*", ["taskList"]);
+    gulp.watch("./ReactWidgetBoilerplate/**/*", ["taskList"]);
 });
 gulp.task("default", ["clean", "watch"]);

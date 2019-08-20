@@ -36,6 +36,11 @@ export default class MxReactWidget extends React.Component<IMxReactWidgetProps, 
         }, 1000)
     }
     componentWillReceiveProps(nextProps: IMxReactWidgetProps) {
+        return (
+            <div>
+                {nextProps}
+            </div>
+        )
     }
     render() {
         return (
