@@ -4,7 +4,8 @@
   "description": "mx react widget",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./node_modules/gulp/bin/gulp build"
   },
   "repository": {
     "type": "git",
@@ -36,5 +37,8 @@
     "typescript": "^2.9.2",
     "webpack": "^4.17.2",
     "webpack-stream": "^5.1.1"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
   }
 }
